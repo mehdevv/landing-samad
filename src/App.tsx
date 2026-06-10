@@ -198,7 +198,7 @@ function Hero() {
         <div className="fade-up flex items-center gap-3" dir="ltr">
           <span className="live-dot" />
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-ink-muted">
-            Live Event &nbsp;/&nbsp; Thursday Night &nbsp;/&nbsp; Google Meet
+            Live Event &nbsp;/&nbsp; Tuesday Night &nbsp;/&nbsp; Google Meet
           </p>
         </div>
 
@@ -431,7 +431,7 @@ function RegisterForm() {
               <div className="border-2 border-ink bg-paper-soft p-10 text-center sm:p-12">
                 <p className="text-sm font-medium text-ink-muted">مؤكَّد</p>
                 <p className="mt-6 text-2xl font-light tracking-tight text-ink">
-                  تم تأكيد حضورك. نراك يوم الخميس. 🤍
+                  تم تأكيد حضورك. نراك يوم الثلاثاء. 🤍
                 </p>
               </div>
             ) : (
