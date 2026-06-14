@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { type AffiliateRef, useAffiliateRef } from "@/lib/affiliate";
 import { registerForLive } from "@/lib/register";
 import bgHero from "@/assets/bg-hero.jpg";
 import bgTopics from "@/assets/bg-topics.jpg";
@@ -44,7 +45,7 @@ function scrollToForm() {
   document.getElementById("register")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-export default function App() {
+export default function App({ affiliateRef }: { affiliateRef?: AffiliateRef }) {
   useReveal();
   useParallax();
   return (
@@ -56,7 +57,7 @@ export default function App() {
       <Divider />
       <Hosts />
       <Divider />
-      <RegisterForm />
+      <RegisterForm affiliateRef={affiliateRef} />
       <Divider />
       <About />
       <Divider />
@@ -382,7 +383,8 @@ function Hosts() {
   );
 }
 
-function RegisterForm() {
+function RegisterForm({ affiliateRef }: { affiliateRef?: AffiliateRef }) {
+  const ref = useAffiliateRef(affiliateRef);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -399,6 +401,7 @@ function RegisterForm() {
         phone: String(fd.get("phone") || ""),
         email: String(fd.get("email") || ""),
         reason: String(fd.get("reason") || ""),
+        ...(ref ? { ref } : {}),
       });
       setStatus("success");
       formRef.current?.reset();

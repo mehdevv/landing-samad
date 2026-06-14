@@ -7,6 +7,7 @@ const schema = z.object({
   phone: z.string().trim().min(3).max(30),
   email: z.string().trim().email().max(255),
   reason: z.string().trim().min(1).max(200),
+  ref: z.enum(["samad", "mehdi"]).optional(),
 });
 
 export type RegistrationData = z.infer<typeof schema>;
