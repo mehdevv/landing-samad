@@ -138,8 +138,8 @@ function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-10">
         <div className="flex items-center gap-4">
           <LiveBadge />
-          <div className="hidden text-[11px] font-medium uppercase tracking-[0.22em] text-ink sm:block" dir="ltr">
-            NLD Creative <span className="mx-2 text-ink-muted">×</span> Pluss.dev
+          <div className="hidden text-[11px] font-medium tracking-[0.12em] text-ink sm:block">
+            عبد الصمد <span className="mx-2 text-ink-muted">×</span> مهدي
           </div>
         </div>
         <button
@@ -233,20 +233,12 @@ function Hero() {
         </div>
 
         <div
-          className="fade-up mt-24 flex flex-col items-center gap-4 text-sm text-ink-muted sm:flex-row sm:gap-6"
+          className="fade-up mt-24 flex items-center gap-4 text-sm text-ink sm:gap-6"
           style={{ animationDelay: "480ms" }}
         >
-          <span>
-            <span className="text-ink">عبد الصمد</span>
-            <span className="mx-2 text-ink-muted">—</span>
-            <span dir="ltr">NLD Creative</span>
-          </span>
-          <span className="hidden h-4 w-px bg-line sm:block" />
-          <span>
-            <span className="text-ink">مهدي</span>
-            <span className="mx-2 text-ink-muted">—</span>
-            <span dir="ltr">Pluss.dev</span>
-          </span>
+          <span>عبد الصمد</span>
+          <span className="text-ink-muted">×</span>
+          <span>مهدي</span>
         </div>
       </div>
     </section>
@@ -338,7 +330,6 @@ function Hosts() {
   const hosts = [
     {
       name: "عبد الصمد",
-      brand: "NLD Creative",
       bio: "مُصمّم ومُنتج رقمي يبني علامات ومنتجات بحسٍّ فنّيّ هادئ ومُتقن.",
       image: samadPhoto,
       alt: "عبد الصمد",
@@ -346,7 +337,6 @@ function Hosts() {
     },
     {
       name: "مهدي",
-      brand: "Pluss.dev",
       bio: "مهندس يحوّل Vibe Coding إلى مشاريع حقيقية وإيرادات حقيقية وسير عمل واضح.",
       image: mehdiPhoto,
       alt: "مهدي",
@@ -371,9 +361,6 @@ function Hosts() {
             />
             <div>
               <h3 className="text-2xl font-light tracking-tight text-ink">{h.name}</h3>
-              <p className="mt-1 text-[12px] tracking-[0.22em] text-ink-muted" dir="ltr">
-                {h.brand}
-              </p>
             </div>
             <p className="max-w-sm text-base font-light leading-loose text-ink-soft">{h.bio}</p>
           </div>
@@ -544,8 +531,8 @@ function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="mx-auto max-w-7xl px-6 py-12 text-center sm:px-10">
-        <p className="text-[11px] uppercase tracking-[0.28em] text-ink" dir="ltr">
-          NLD Creative <span className="mx-2 text-ink-muted">×</span> Pluss.dev
+        <p className="text-[11px] tracking-[0.12em] text-ink">
+          عبد الصمد <span className="mx-2 text-ink-muted">×</span> مهدي
         </p>
         <p className="mt-4 text-sm font-light text-ink-muted">
           بث مباشر مجاني &nbsp;·&nbsp; Google Meet &nbsp;·&nbsp; {new Date().getFullYear()}

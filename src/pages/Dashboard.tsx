@@ -11,7 +11,7 @@ import {
 } from "@/lib/dashboard";
 
 const REF_LABELS: Record<string, string> = {
-  samad: "Samad",
+  samad: "Abdessamad",
   mehdi: "Mehdi",
   direct: "Direct",
 };
@@ -242,7 +242,7 @@ export default function Dashboard() {
             <p className="text-[11px] uppercase tracking-[0.28em] text-ink-muted">Vibe Coding Live</p>
             <h1 className="mt-3 text-3xl font-light tracking-tight text-ink sm:text-4xl">لوحة التسجيلات</h1>
             <p className="mt-2 text-sm font-light text-ink-soft">
-              إجمالي التسجيلات ومصادر الروابط (Samad / Mehdi / Direct)
+              إجمالي التسجيلات ومصادر الروابط (Abdessamad / Mehdi / Direct)
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -280,7 +280,7 @@ export default function Dashboard() {
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatCard label="إجمالي التسجيلات" value={data?.total ?? 0} />
-          <StatCard label="Samad" value={samadCount} accent="text-ink" />
+          <StatCard label="Abdessamad" value={samadCount} accent="text-ink" />
           <StatCard label="Mehdi" value={mehdiCount} accent="text-pluss-blue" />
           <StatCard label="Direct" value={directCount} accent="text-ink-muted" />
         </div>
@@ -300,7 +300,7 @@ export default function Dashboard() {
             dir="ltr"
           >
             <option value="all">All sources</option>
-            <option value="samad">Samad</option>
+            <option value="samad">Abdessamad</option>
             <option value="mehdi">Mehdi</option>
             <option value="direct">Direct</option>
           </select>
