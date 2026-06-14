@@ -4,7 +4,7 @@ import { type AffiliateRef, useAffiliateRef } from "@/lib/affiliate";
 import { registerForLive } from "@/lib/register";
 import bgHero from "@/assets/bg-hero.jpg";
 import bgTopics from "@/assets/bg-topics.jpg";
-import nldLogo from "@/assets/nld-logo.jpg";
+import samadPhoto from "@/assets/samad.jpg";
 import mehdiPhoto from "@/assets/mehdi.jpg";
 
 const REASONS = [
@@ -340,9 +340,9 @@ function Hosts() {
       name: "عبد الصمد",
       brand: "NLD Creative",
       bio: "مُصمّم ومُنتج رقمي يبني علامات ومنتجات بحسٍّ فنّيّ هادئ ومُتقن.",
-      image: nldLogo,
-      alt: "NLD Creative",
-      imageClass: "object-cover",
+      image: samadPhoto,
+      alt: "عبد الصمد",
+      imageClass: "object-cover object-top",
     },
     {
       name: "مهدي",
